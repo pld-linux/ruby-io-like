@@ -1,5 +1,5 @@
 %define	pkgname	io-like
-Summary:	A module which provides the functionality of an IO object to any class which provides a couple of simple methods
+Summary:	IO::Like - in the Likeness of IO
 Name:		ruby-%{pkgname}
 Version:	0.3.0
 Release:	1
@@ -14,9 +14,12 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The IO::Like module provides the methods of an IO object based upon on
-a few simple methods provided by the including class: unbuffered_read,
-unbuffered_write, and unbuffered_seek.
+The IO::Like module provides all of the methods of typical IO
+implementations such as File; most importantly the read, write, and
+seek series of methods. A class which includes IO::Like needs to
+provide only a few methods in order to enable the higher level
+methods. Buffering is automatically provided by default for the
+methods which normally provide it in IO.
 
 %prep
 %setup -q -n %{pkgname}-%{version}
