@@ -1,12 +1,12 @@
 %define	pkgname	io-like
 Summary:	IO::Like - in the Likeness of IO
 Name:		ruby-%{pkgname}
-Version:	0.3.0
+Version:	0.4.0
 Release:	1
 License:	GPL v2+ or Ruby
 Group:		Development/Languages
 Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
-# Source0-md5:	7a16ea4dfd897a9af9855d19416f3e4a
+# Source0-md5:	728260eebb9a7abc1a07be4be2257260
 URL:		http://io-like.rubyforge.org/
 BuildRequires:	rpm-rubyprov
 BuildRequires:	rpmbuild(macros) >= 1.656
@@ -41,4 +41,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %dir %{ruby_vendorlibdir}/io
 %{ruby_vendorlibdir}/io/like.rb
+%{ruby_vendorlibdir}/io/like_helpers.rb
+%{ruby_vendorlibdir}/io/like_helpers
 %{ruby_specdir}/%{pkgname}-%{version}.gemspec
